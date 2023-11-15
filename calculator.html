@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+</head>
+<body>
+    <label>Enter your first number</label><br>
+    <input type="text" id="a1"><br>
+    <label>Enter your second number</label><br>
+    <input type="text" id="a2"><br>
+    <button onclick="add()">Add Numbers</button><br>
+    <button onclick="minus()">Minus Numbers</button><br>
+    <button onclick="multiply()">Multiply Numbers</button><br>
+    <button onclick="divide()">Divide Numbers</button>
+    <script>
+         function add(){
+            var num1, num2, sum;
+            num1 = parseInt(document.getElementById("a1").value);
+            num2 = parseInt(document.getElementById("a2").value);
+            sum = num1 + num2
+            document.write(sum)
+            document.write("<br><button onclick='ret()'>Calculate again" + "</button>")
+
+         }
+         function minus(){
+            var num1, num2, sum;
+            num1 = parseInt(document.getElementById("a1").value);
+            num2 = parseInt(document.getElementById("a2").value);
+            sum = num1 - num2
+            document.write(sum)
+            document.write("<br><button onclick='ret()'>Calculate again" + "</button>")
+         }
+         function multiply(){
+            var num1, num2, sum;
+            num1 = parseInt(document.getElementById("a1").value);
+            num2 = parseInt(document.getElementById("a2").value);
+            sum = num1 * num2
+            document.write(sum)
+            document.write("<br><button onclick='ret()'>Calculate again" + "</button>")
+         }
+         function divide(){
+            var num1, num2, sum;
+            num1 = parseInt(document.getElementById("a1").value);
+            num2 = parseInt(document.getElementById("a2").value);
+            sum = num1 / num2
+            document.write(sum)
+            document.write("<br><button onclick='ret()'>Calculate again" + "</button>")
+         }
+         function ret(){
+            window.open("calculator.html","_self")
+         }
+    
+    </script>
+    
+</body>
+</html>

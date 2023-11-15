@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Detect</title>
+</head>
+<body>
+<Label>Put your name here!</Label><br>
+<input type="text" id="a1"><br>
+<label>Insert current age</label><br>
+<input type="text" id="a2"><br>
+<button onclick="chkage()">Check Age Group</button>
+
+<script>
+    function chkage(){
+    let name, age;
+    name = document.getElementById("a1").value;
+    age = parseInt(document.getElementById("a2").value);
+    if(age < 13){
+        document.write("Hello " + name + "! " + "Based on your age, you are classified as a Child.")
+    }
+    if(age >= 13 && age <= 17){
+        document.write("Hello " + name + "! " + "Based on your age, you are classified as a Teenager.")
+    }
+    if(age >= 18 && age <= 59){
+        document.write("Hello " + name + "! " + "Based on your age, you are classified as a Adult.")
+    }
+    if(age >= 60){
+        document.write("Hello " + name + "! " + "Based on your age, you are classified as a Senior Citizen.")
+    }
+    document.write("<br><button onclick='ret()'>Check again</button>")
+    }
+    function ret(){
+        window.open("agedetector.html","_self")
+    }
+
+</script>
+    
+</body>
+</html>

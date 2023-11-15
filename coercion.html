@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coercion</title>
+</head>
+
+<body><center>
+    <h1>This Is Coercion Page</h1>
+
+    <label>Enter your first String</label><br>
+    <input type="text" id="a1"><br>
+    <label>Enter second number</label><br>
+    <input type="text" id="a2"><br>
+    <button onclick="strcoer()">Add String</button><br>
+    <button onclick="numcoer()">Add Num</button><br>
+    <button onclick="boocoer()">Add Boolean</button><br>
+</center>
+
+
+    <script>
+
+        // string value
+
+        function strcoer() {
+            let str1, str2, sum;
+
+            str1 = (document.getElementById("a1").value);
+            str2 = (document.getElementById("a2").value);
+            sum = str1 + str2
+            document.write(sum);
+
+        }
+
+        // number value
+
+        function numcoer(){
+            let num1,num2,sum;
+
+            num1 = parseInt(document.getElementById("a1").value);
+            num2 = parseInt(document.getElementById("a2").value);
+            sum = num1 / num2
+            document.write(sum);
+        }
+
+        // boolean value
+        
+        function boocoer(){
+            let boo1,boo2,sum;
+
+             boo1 = (document.getElementById("a1").value);
+            boo2 = (document.getElementById("a2").value);
+            sum = boo1 === boo2 
+            document.write(sum); 
+        
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+
+<body>
+    <h1>The first 10 terms of the Fibonnaci Sequence</h1>
+    <p id="fibo" style="font-size: xx-large;"></p>
+    
+    
+    <script>
+        function generateFibonacci(n) {
+            let fib = [0, 1];
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            return fib;
+        }
+        const numTerms = 10;
+        const fibonacciSequence = generateFibonacci(numTerms);
+        console.log(`First ${numTerms} terms of the Fibonacci sequence:`);
+        for (let i = 0; i < numTerms; i++) {
+            console.log(fibonacciSequence[i]);
+        }
+        document.getElementById("fibo").innerHTML = generateFibonacci(numTerms);
+    
+    </script>
+
+</body>
+
+</html>

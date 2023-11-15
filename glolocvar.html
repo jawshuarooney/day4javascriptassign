@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and local variable</title>
+</head>
+
+<body>
+    <script>
+        var a1 = 10//global variable
+
+        function check() {
+            var a = a1 - 3; //local variable
+            document.write("This is local variable -> " + a + "<br>");
+            document.write("This is global variable -> " + a1 + "<br>");
+        }
+        function glo() {
+            document.write("this variable can be used still and not effected by local variable a -> " + a1);
+        }
+        function loc() {
+            document.write("While this cannot be found because it is a local in a different function -> " + a );
+        }
+        check();
+        glo();
+        loc();
+
+
+        //so this shows that even the global variable works even in a different function, while local variable only works in the function that it was mentioned in
+
+    </script>
+
+</body>
+
+</html>
